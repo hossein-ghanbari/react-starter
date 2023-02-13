@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: IRANYekanWeb;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/YekanBakhFaNum-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: IRANYekanWeb;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/YekanBakhFaNum-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: IRANYekanWeb;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/YekanBakhFaNum-ExtraBlack.woff") format("woff");
+}
+
+@tailwind utilities;
+
+@layer base {
+  html *,
+  html *::before,
+  html *::after {
+    box-sizing: inherit !important;
+  }
+
+  html {
+    @apply box-border scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-white font-yekan text-base font-normal text-tdark;
+  }
+
+  hr {
+    @apply my-4 text-gray-500;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  a[href] {
+    @apply text-primary transition-all;
+  }
+
+  a[href]:hover {
+    @apply text-primary-dark;
+  }
+
+  button:disabled {
+    @apply opacity-40;
+  }
+}
+
+@layer utilities {
+  .rtl {
+    text-align: right;
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+}
